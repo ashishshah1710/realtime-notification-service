@@ -31,9 +31,9 @@ Event-driven notification engine consuming Kafka topics to deliver real-time ale
     +------------------+          +------------------+
     | Notification     |          | Dead Letter      |
     | Consumer         |          | Consumer         |
-    | (3 retries)      |  ---X---> | "notifications   |
+    | (3 retries)      |  --X---> | "notifications   |
     +--------+---------+          |  .DLT"           |
-              |                    +--------+---------+
+              |                   +--------+---------+
               |                             |
               v                             v
     +------------------+          +------------------+
